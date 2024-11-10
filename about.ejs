@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Travel Planner</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('grand.jpeg') no-repeat center center fixed; 
+            background-size: cover;
+            color: black;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .top-links {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px; 
+        }
+        .top-link {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .top-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-links">
+        <a class="top-link" href="/">Home</a>
+        <a class="top-link" href="/route-planner">Route Planner</a>
+    </div>
+
+    <h1>About Travel Planner</h1>
+    <div class="content">
+        <h2>How the Route-Finding Works</h2>
+        <p>The Travel Planner is designed to help users find optimal routes between specific locations within Oman. It uses Dijkstra's algorithm, which is a well-known graph search algorithm, to compute the shortest path from a starting point to a destination.</p>
+        <p>Here’s a breakdown of how the system operates:</p>
+        <ol>
+            <li><strong>Graph Representation:</strong> The locations (nodes) and the distances between them (edges) are represented as a graph. Each edge has a weight that indicates the distance or cost associated with traveling between two locations.</li>
+            <li><strong>Adding Edges:</strong> The application includes pre-defined routes, but users can easily adapt the graph to add new routes as needed, enhancing the system's flexibility and usability.</li>
+            <li><strong>Dijkstra's Algorithm:</strong> When a user specifies a starting and ending location, the algorithm searches the graph to find the shortest path. It works by exploring the least expensive nodes first, gradually building the shortest path until it reaches the destination.</li>
+            <li><strong>Result Presentation:</strong> Once the shortest path is found, the system returns the result, displaying the optimal route along with the total distance.</li>
+        </ol>
+        <p>This system is particularly useful for planning trips and optimizing travel time within Oman, ensuring that users can navigate efficiently between their desired locations.</p>
+    </div>
+</body>
+</html>
